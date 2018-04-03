@@ -1,0 +1,14 @@
+{
+  "name": "wiz-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "author": "David Vujic",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^11.x"
+  }
+}
