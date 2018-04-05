@@ -14,7 +14,7 @@ function fieldExecutor (field, resolve) {
     const res = field.options.find(opt => opt.value === parsed)
 
     rl.close()
-    resolve(res)
+    resolve({ question: field.question, data: res })
   })
 }
 

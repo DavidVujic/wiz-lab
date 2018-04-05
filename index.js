@@ -11,10 +11,11 @@ async function main (fields) {
   return answers
 }
 
-async function calculate (answers) {
-  const sum = answers.reduce((acc, opt) => acc + opt.value, 0)
+async function calculate (responses) {
+  const sum = responses.reduce((acc, response) => acc + response.data.value, 0)
 
   console.log(sum)
+  console.log(JSON.stringify(responses, null, 2))
 }
 
 main(fields).then(calculate)
