@@ -1,5 +1,6 @@
 const fields = require('./src/fields.js')
 const question = require('./src/question.js')
+const add = require('./src/add.js')
 
 async function main (fields) {
   const answers = []
@@ -16,6 +17,11 @@ async function calculate (responses) {
 
   console.log(sum)
   console.log(JSON.stringify(responses, null, 2))
+
+  return responses
 }
 
-main(fields).then(calculate)
+main(fields)
+  .then(calculate)
+  .then(add)
+  .then(() => console.log('done!'))
